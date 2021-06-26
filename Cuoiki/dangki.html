@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đăng kí</title>
+	<style type="text/css">
+		.table{
+			
+		}
+		.form{
+			border-width: 2px;
+			border-style: dashed;
+			margin: 100px 250px;
+			border-color: #99909a;
+			width: 500px;
+			height: 600px;
+			background-color: #dcd9de;
+		}
+		.ten input{
+			width: 300px;
+			height: 25px;
+			border-radius: 8px;
+			border:2px solid #99909a ;
+
+		}
+		.thongtin  h1{
+			margin-left: 191px;
+			color: #99909a;
+		}
+		.chinhsach{
+			margin-left: 125px;
+		}
+		.chinhsach input{
+			float: left;
+		}
+		.lo-sign{
+			display: inline-flex;
+		}
+		.lo-sign{
+			display: inline-flex;
+		}
+		.sign{
+			border: 2px solid #99909a;
+			color: #4a1313;
+			text-align: center;
+			background-color: #cbc7cc;
+			border-radius: 8px;
+			margin-left: 160px;
+			
+		}
+		.login{
+			border: 2px solid #99909a;
+			text-align: center;
+			background-color: #cbc7cc;
+			border-radius: 8px;
+			margin-left: 65px;
+			width: 57px;
+		}
+		.login a{
+			text-decoration: none;
+			color: #4a1313;
+		}
+		.page a{
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="table">
+		<div class="form">
+			<div class="thongtin">
+			<h1>LOGIN</h1>
+			</div>
+			<div class="ten">
+				First Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<input id="ten" type="text" name="" placeholder="First Name">
+			</div>
+			<br>
+			<br>
+			<div class="ten">
+				Last Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<input id="tendem" type="text" name="" placeholder="Last Name">
+			</div>
+			<br>
+			<br>
+			<div class="ten">
+				Email:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<input id="email" type="text" name="" placeholder="Email">
+			</div>
+			<br>
+			<br>
+			<div class="ten">
+				Password:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<input id="password" type="password" name="" placeholder="Password">
+			</div>
+			<br>
+			<br>
+			<div class="ten">
+				Confirm Password:
+				<input id="cfpass"  type="password" name="" placeholder="Confirm Password">
+			</div>
+			<br>
+			<br>
+			<div class="gt">
+				Giới tính:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<input type="radio" id="radio" name="gioitinh" value="nam"> Nam
+				<input type="radio" id="radio" name="gioitinh" value="nu"> Nữ
+			</div>
+			<div class="chinhsach">
+				<input id="checkbox" type="checkbox" name="">
+				<h4>Tôi đồng ý với những Điều khoản, Chính sách dữ liệu.</h4>
+			</div>
+			<div class="lo-sign">
+            	 <input type="submit" name="" value="Sign Up" class="sign" id="sign" onClick="sign()">
+            	 <span class="login"><a href="dangnhap.html">Login</a></span>
+            </div>
+            <div class="page"><a href="index.html">💜Home💜</a></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/dangki.js"></script>
+</body>
+</html>

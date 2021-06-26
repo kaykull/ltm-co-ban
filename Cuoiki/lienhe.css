@@ -1,0 +1,281 @@
+a {
+	text-decoration: none;
+}
+
+.header {
+			width: 100%;
+			height: 150px;
+			background-color: #e29def;
+			position: fixed;
+			top: 0;
+		}
+		.dkdn {
+			width: 100%;
+			height: 30px;
+			/*margin-left: 750px;*/
+			text-align: center;
+			padding-top: 10px;
+			background-color: #e29def;
+		}
+		.dangki {
+			font-size: 18px;
+			font-weight: bold;
+			width: 200px;
+			height: 30px;
+			text-align: right;
+			float: left;
+			color: white;
+			margin-left: 750px;
+			/*background-color: yellow;*/
+		}
+		.dangki a {
+			size: 24px;
+		}
+
+		.dangnhap {
+			font-size: 18px;
+			font-weight: bold;
+			width: 100px;
+			height: 30px;
+			text-align: right;
+			float: left;
+			color: white;
+			display: inline-block;
+			/*background-color: yellow;*/
+		}
+
+		.giohang {
+			width: 150px;
+			height: 30px;
+			float: left;
+			color: white;
+			/*background-color: cyan;*/
+			margin-left: 30px;
+		}
+
+		.demso {
+			float: left;
+			width: 50px;
+			height: 30px;
+		}
+		.logo_timkiem {
+		    width: 1045px;
+		    height: 100px;
+		    margin: 0 auto;
+		    display: flex;
+		    justify-content: space-between;
+		}
+
+		.logo {
+			width: 70px;
+			height: 70px;
+			float: left;
+			/*background-color: blue;*/
+			margin: -35px -25px;
+		}
+
+		.timkiem {
+		    width: 400px;
+		    height: 35px;
+		    display: inline-flex;
+		    margin: 40px 0;
+		    border:2px solid #8e5f96;
+		    border-radius: 8px;
+		}
+		
+
+		.timkiem input {
+			width: 355px;
+			height: 33px;
+			border: 0px solid #7c1390;
+			border-bottom-left-radius: 8px;
+			border-top-left-radius: 8px;
+
+			/*background-color: yellow*/
+		}
+		.timkiem button img {
+			width: 30px; 
+			height: 25px;  
+			padding: 2px;
+
+			
+		}
+		.timkiem button {
+			width: 42px; 
+			height: 35px;
+			border: 0px solid #7c1390;
+			background-color: #8e5f96;
+			border-bottom-right-radius: 5px;
+			border-top-right-radius: 5px; }
+
+/*Menudacap*/
+		.menu-chinh {
+			width: 100%;	
+			height: 40px;
+			/*background-color: cyan;*/
+			position: absolute ;
+			background-color: #d38ce0;
+		}
+		.menu {
+			width: 860px;
+			height: 20px;
+			margin: 0px auto;
+			/*padding: 20px 20px;*/
+		}
+			.menu>li{
+				float: left;
+				margin-right: 15px;
+				
+
+			}
+			.menu>li>a{
+				text-transform: uppercase;
+			}
+			.menu li{
+				position: relative;
+				list-style: none;
+				border-bottom: 1px solid #e8e8e8;
+			}
+			.menu li a{
+				padding:10px;
+				line-height: 20px;
+				display: inline-block;
+			}
+			.menu a {
+				  text-decoration: none;
+				  color: #fff;
+				  display: block;
+			}
+			.menu a:hover {
+				  background: #F1F1F1;
+				  color: #333;
+}
+			.menu .menu-c2-1{
+				display: none;
+				position: absolute;
+				top: 0;
+				left: 100%;
+				width: 195px;
+				background-color: #e29def;
+				padding:0px;
+			}
+			.menu li:hover>.menu-c2-1{
+				display: block;
+
+			}
+			.menu>li>.menu-c2-1{
+				top: 40px;
+				left: 0%;
+			}
+			.menu-c2-1>li>a{
+				text-transform: uppercase;
+				color: white;
+				display: block;
+				
+			}
+			.menu li:hover{
+				background-color: white;
+			}
+
+footer {
+	width: 100%;
+	height:355px;
+	background-color: #e29def;
+}
+
+.lienket {
+	width: 200px;
+	height: 75px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.lienket div {
+	width: 50px;
+	height: 50px;
+	/*border: 2px solid;*/
+	border-radius: 50%;
+	float:  left;
+	margin-top: 10px;
+	/*background-color: gray;*/
+}
+
+.thongtin {
+	width: 1000px;
+	height: 200px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0px 200px 0px 200px;
+}
+
+.thongtin div {
+	width: 300px;
+	height: 200px;
+}
+
+.thongtin div a {
+	font-size: 16px;
+	color: gray;
+	line-height: 30px;	
+}
+
+.gioithieu { 
+	width: 100%
+	height: 40px; 
+}
+
+.gioithieu p {
+	font-size: 17px;
+	text-align: center;
+	color: gray;
+}
+
+/*main tu day*/
+.main1{
+	width: 100%;
+	min-height: 250px;
+	margin-top: 165px;
+	
+}
+.lh{
+	color: #d2acbf;
+}
+.lh input{
+	border:3px solid #d2acbf;
+
+}
+.lh textarea{
+	border:3px solid #d2acbf;
+}
+.btn{
+			display: inline-block;
+		    padding: 0px;
+		    font-size: 20px;
+		    cursor: pointer;
+		    text-align: center;
+		    text-decoration: none;
+		    outline: none;
+		    color: #fff;
+		    background-color: #e29def;
+		    border: none;
+		    border-radius: 15px;
+		    box-shadow: 0 3px #d2acbf;
+		    width: 65px;
+		    height: 40px;
+		    margin-left: 75px;
+		}
+/*.main1 p{
+	margin: 20px 200px auto;
+}
+.main1 img{
+	width: 40%;
+	height: 500px;
+	margin: 20px 390px auto;
+}*/
+
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shop Link kiện</title>
+	<link rel="stylesheet" type="text/css" href="lienhe.css">
+</head>
+<body background="img/anhnen.jpg">
+	<header class="header">
+		<div class="dkdn">
+			<div class="dangki">
+				<a href="dangki.html" style="color: white">Đăng kí</a>
+			</div>
+			<div class="dangnhap">
+				<a href="dangnhap.html" style="color: white">Đăng nhập</a>
+			</div>
+			
+			<span class="giohang">
+				<a href="giohang.html">
+					<img src="img/gh.png" style="width: 20px; height: 20px; float: left;">
+					<div class="demso" id="mua">
+						<a href="giohang.html">0</a>
+					</div>	
+				</a>
+			</span>
+		</div>
+		<div class="logo_timkiem">
+			<div class="logo">
+				<img src="img/logo.png" style="width: 350px; ">
+			</div>
+			<div class="timkiem">
+				<input type="text" name="" placeholder="Tìm kiếm sản phẩm">
+				<button><img src="img/timkiem.png"></button>
+			</div>
+		</div>
+	<div class="menu-chinh">
+		<ul class="menu">
+			<li><a href="index.html">Trang chủ</a></li>
+			<li>
+				<a href="phukientt.html">Phụ kiện thời trang</a>
+				<ul class="menu-c2-1">
+					<li>
+						<a href="phukientt.html">Phụ kiện</a>
+						<ul class="menu-c2-1">
+							<li><a href="">Băng đô</a></li>
+							<li><a href="">Tất vớ</a></li>
+							<li><a href="">Móc Khóa</a></li>
+						</ul>
+					</li>
+					<li><a href="">Túi ví</a></li>
+				</ul>
+			</li>
+			<li><a href="gaubong.html">Gấu bông và gối</a></li>
+			<li><a href="thongtinch.html">Thông tin cửa hàng</a></li>
+			<li><a href="lienhe.html">Liên Hệ</a></li>
+		</ul>		
+	</div>
+	</header>
+	<div class="main1">
+		<br>
+		<br>
+		<div >
+        <article>
+        <br />
+            <form onsubmit="return validateForm()">
+        <div class="lh">&nbsp;&nbsp<a>Họ Tên*</a>&nbsp;&nbsp;
+            <input class="h" type="text" id="username" placeholder="Mời bạn nhập tên"/>
+        <div class="val_error" id="name_error"></div></div><br />
+        <div class="lh">&nbsp;&nbsp<a>Email*</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input class="h" type="text" id="email" placeholder="Mời bạn nhập email"/>
+         <div class="val_error" id="email_error"></div></div><br />
+        <div class="lh">&nbsp;&nbsp<a>Tiêu Đề</a>&nbsp;&nbsp;&nbsp;
+            <input class="ha" type="text" id="topic" placeholder="Mời bạn nhập tiêu đề"/>
+        <div class="val_error" id="topic_error"></div></div><br />
+        <div class="lh">&nbsp;&nbsp<a>Nội Dung</a>
+        <textarea class="hh" rows="10" cols="70" id="content" placeholder="Mời bạn nhập ý kiến phản hồi"></textarea>
+        <div class="val_error" id="content_error"></div></div><br />
+        <div class="hu"><button class="btn" type="submit">Send</button></div>
+        </form>
+    <script>
+    var username = document.getElementById('username');
+    var email = document.getElementById('email');
+    var topic = document.getElementById('topic');
+    var content = document.getElementById('content');
+    var name_error = document.getElementById('name_error');
+    var email_error = document.getElementById('email_error');
+    var topic_error = document.getElementById('topic_error');
+    var content_error = document.getElementById('content_error');
+    function validateForm(){
+     if(username.value==""){
+       username.style.border="2px solid red";
+       name_error.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bạn cần nhập họ tên";
+            username.focus();
+            return false;
+        }
+        var acong = email.value.indexOf('@');
+        var dot = email.value.lastIndexOf('.');
+            
+            if(email.value == "" || acong<1 || dot < acong+2 || dot+2>=email.value.length){
+                email.style.border = "2px solid red";
+                email_error.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bạn cần nhập đúng email";
+                email.focus();
+                return false;   
+            }
+            if(topic.value==""){
+       topic.style.border="2px solid red";
+       topic_error.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bạn cần nhập tiêu đề";
+            topic.focus();
+            return false;
+        }
+        if(content.value==""){
+       content.style.border="2px solid red";
+       content_error.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bạn cần nhập nội dung";
+            content.focus();
+            return false;
+        }
+    }
+
+    // giohang
+     var obj = JSON.parse(localStorage.getItem('item'));
+
+    var total = 0;
+    for (var i = 0; i < obj.length; i++) {
+        total += obj[i].price;
+
+    }
+    document.getElementById('count').innerHTML = obj.length;
+    var html = '<table style="margin-left: 50px;margin-right: 50px;" border="2  " width="50%">';
+    html += '<tr>';
+
+    html += '<th>Name</th>';
+    html += '<th>Price</th>';
+
+    html += '</tr>';
+    for (var i = 0; i < obj.length; i++) {
+        html += '<tr>';
+        html += '<td>' + obj[i].name + '</td>';
+        html += '<td>' + (obj[i].price) + ' VNĐ </td>';
+        html += '</tr>';
+    }
+    html += '<td><b>Total:</b></td>';
+    html += '<td><b> ' + (total) + ' VNĐ</b> </td>';
+    html += '</table>';
+    document.getElementById('container').innerHTML = html;
+    </script>
+	</div>
+	<footer>
+		<div class="lienket">
+			<div class="fb"><a href=""><img src="img/op.png"></a></div>
+			<div class="insta"><a href=""><img src="img/oo.png"></a></div>
+			<div class="tiktok"><a href=""><img src="img/mail.png" width="50px" height="50px"></a></div>
+		</div>
+		<div class="thongtin">
+			<div class="ttlh">
+				<h3>THÔNG TIN LIÊN HỆ</h3>
+				<a href="">HOTLINE: 0879391214</a><br>
+				<a href="">EMAIL: bear@gmail.com</a><br>
+				<a href="">CHÍNH SÁCH BÁN HÀNG</a><br>
+				<a href="">HƯỚNG DẪN MUA HÀNG</a>
+			</div>
+			<div class="ttvct">
+				<h3>TUYỂN DỤNG</h3>
+				<a href="">Bấm vào đây</a><br>
+				<a href="">Hướng dẫn cách thức tuyển dụng</a><br>
+				<a href="">Quy trình tuyển dụng</a>
+			</div>
+		</div>
+		<div class="gioithieu">
+			<p>Các sản phẩm cam kết đều là hàng mới theo xu hướng các bạn trẻ hiện nay</p>
+			<p>Bản quyền © 2020. Hiện thân của sự cống hiến không ngừng để đạt được sự hoàn hảo</p>
+		</div>
+	</footer>
+	<script type="text/javascript">
+		var arr = []; //khai báo mảng
+	    if (sessionStorage.getItem('item') != null) {
+	        arr = JSON.parse(sessionStorage.getItem('item'));
+	    }
+
+	    document.getElementById('mua').innerHTML = arr.length;
+
+	    function buy(name, price) {
+	        arr.push({'name': name, 'price': price});// đẩy vào mảng tên với giá
+	        console.log(arr); //hiển thị mảng
+	        sessionStorage.setItem('item', JSON.stringify(arr));
+	        document.getElementById('mua').innerHTML = arr.length;
+	    }
+	</script>
+</body>
+</html>
